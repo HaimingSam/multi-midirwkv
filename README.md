@@ -19,7 +19,7 @@ cd
 python download_galidata.py
 python process_data.py 
 ```
-### train
+### Train
 ```
 python train_midimodel.py \
 --model_config /home/rwkv/cai-RWKV/Multi-midirwkv/train/hparams/midimodel.jsonl \

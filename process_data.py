@@ -97,10 +97,10 @@ if __name__ == "__main__":
     tokenizer = REMI(config)
     
     # Explicitly save tokenizer configuration
-    tokenizer.save("/home/rwkv/cai-RWKV/Multi-midirwkv/tokenizer_params.json")
+    tokenizer.save("/home/rwkv/cai-RWKV/Multi-midirwkv/train/tokenizer/tokenizer_params.json")
     
     # Save vocabulary
-    save_tokenizer_vocab(tokenizer, "/home/rwkv/cai-RWKV/Multi-midirwkv/tokenizer_vocab.json")
+    save_tokenizer_vocab(tokenizer, "/home/rwkv/cai-RWKV/Multi-midirwkv/train/tokenizer/tokenizer_vocab.json")
 
     # Process data
     convert_parquet_to_jsonl(

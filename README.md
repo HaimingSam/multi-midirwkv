@@ -22,6 +22,7 @@ python process_data.py
 ### Train
 
 ```
+cd train
 python train_midimodel.py \
 --model_config /home/rwkv/cai-RWKV/Multi-midirwkv/train/hparams/midimodel.jsonl \
 --midi_tokenizer_config_path ./tokenizer/tokenizer_params.json \
@@ -46,3 +47,6 @@ python train_midimodel.py \
 
 ```
 
+> 注：目前的通道处理方案 \
+> planA 简单处理：在每个通道中仅保留一条轨道 \
+> planB 合并逻辑：按通道分组 → 收集所有轨道 → 按时间排序事件 → 合并为单轨道

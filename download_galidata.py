@@ -6,7 +6,7 @@ snapshot_download(
     local_dir="./hf-mirrors/GigaMIDI",
     repo_type="dataset",
     resume_download=True,  # 支持断点续传
-    token="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"  # 访问令牌
+    token="hf_*****************"  # 访问令牌
 )
 
 # Final_GigaMIDI_V1.1_Final.zip 这个没下，其他都下载了

@@ -20,6 +20,7 @@ python download_galidata.py
 python process_data.py 
 ```
 ### Train
+
 ```
 python train_midimodel.py \
 --model_config /home/rwkv/cai-RWKV/Multi-midirwkv/train/hparams/midimodel.jsonl \
@@ -39,6 +40,9 @@ python train_midimodel.py \
 --wandb_project rwkv7-midi-lm-training \
 --wandb_run_name midirwkv-test \
 --seed 42
+```
+多个GPU分布式训练：
+```
 
 ```
 

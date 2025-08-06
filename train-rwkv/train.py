@@ -67,7 +67,7 @@ import math
 #导入分词器库
 from miditok import REMI  
 # 导入标准RWKV模型
-from src.model import RWKV
+from model import RWKV
 
 logger = logging.getLogger(__name__)
 

@@ -5,7 +5,7 @@
 
 
 ## Method Overview
-
+> 用miditok分词库里的合成单一流模式把多轨midi按时间步对齐成一个长序列，然后用标准rwkv7模型训练后再分轨
 
 ## Instructions
 

@@ -15,19 +15,20 @@
 ```
 ### Datasets
 ```
-cd 
 python download_galidata.py
-python process_data.py 
+cd train-rwkv/data
+python pre_data.py
+python fi_data.py
+python split_data.py
 ```
 ### Train
-
 ```
-cd train
-python train_midimodel.py \
+cd ..
+python train.py \
 --model_config /home/rwkv/cai-RWKV/Multi-midirwkv/train/hparams/midimodel.jsonl \
 --midi_tokenizer_config_path ./tokenizer/tokenizer_params.json \
 --midi_tokenizer_vocab_path ./tokenizer/tokenizer_vocab.json \
---jsonl_data_path /home/rwkv/cai-RWKV/Multi-midirwkv/gigamidi-test3.jsonl \
+--jsonl_data_path /home/rwkv/cai-RWKV/Multi-midirwkv/gigamidi.jsonl \
 --output_dir ./result \
 --num_epochs 3 \
 --per_device_train_batch_size 1 \
@@ -46,8 +47,25 @@ python train_midimodel.py \
 ```
 
 ```
+### Inference
+```
+python inference.py \
+    --model_path output/final_model.pt \
+    --tokenizer_config tokenizer_config.json \
+    --output_path generated_music.mid
 
+```
+或者
+```
+python inference.py \
+    --model_path output/final_model.pt \
+    --tokenizer_config tokenizer_config.json \
+    --output_path generated_music.mid \
+    --prompt_tokens "1,2,3,4,5" \
+    --max_length 2000 \
+    --temperature 0.8
 
+```
 
 ## 附录：有关midi处理逻辑
-
+https://miditok.readthedocs.io/en/latest/tokenizations.html
